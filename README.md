@@ -97,7 +97,7 @@
 ## 🔥 GitHub Stats 🔥
 
 <p align="center">
-  <img src="./dist/live-stats.svg" alt="GitHub Stats" />
+  <img src="https://raw.githubusercontent.com/saimdinky/saimdinky/main/dist/live-stats.svg?refresh=1" alt="GitHub Stats" />
 </p>
 
 ## 📘 My top open source projects
