@@ -62,6 +62,18 @@
 </p>
 <br>
 
+<h1 align="center"> AI, RAG & Vector DBs: </h1>
+<p align="center">
+  <code><a href="https://huggingface.co/"><img alt="Hugging Face" title="Hugging Face" src="https://cdn.simpleicons.org/huggingface" height="42"></a></code>
+  <code><a href="https://www.langchain.com/"><img alt="LangChain" title="LangChain" src="https://cdn.simpleicons.org/langchain" height="42"></a></code>
+  <code><a href="https://www.langchain.com/langgraph"><img alt="LangGraph" title="LangGraph" src="https://cdn.simpleicons.org/langgraph" height="42"></a></code>
+  <code><a href="https://qdrant.tech/"><img alt="Qdrant" title="Qdrant" src="https://cdn.simpleicons.org/qdrant" height="42"></a></code>
+  <code><a href="https://ollama.com/"><img alt="Ollama" title="Ollama" src="https://cdn.simpleicons.org/ollama/FFFFFF" height="42"></a></code>
+  <code><a href="https://www.anthropic.com/"><img alt="Anthropic" title="Anthropic" src="https://cdn.simpleicons.org/anthropic/FFFFFF" height="42"></a></code>
+  <code><a href="https://gemini.google.com/"><img alt="Gemini" title="Gemini" src="https://cdn.simpleicons.org/googlegemini" height="42"></a></code>
+</p>
+<br>
+
 <h1 align="center"> Languages/Frameworks I'm learning: </h1>
 <p align="center">
   <code><a href="https://pytorch.org/"><img alt="PyTorch" title="PyTorch" src="https://skillicons.dev/icons?i=pytorch" height="42"></a></code>
