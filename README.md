@@ -94,14 +94,10 @@
 </p>
 <br>
 
-## 📊 Github stats
+## 🔥 GitHub Stats 🔥
 
 <p align="center">
-  <br/>
-  <a href="https://github.com/anuraghazra/github-readme-stats"><img alt="saimdinky's Github Stats" src="https://github-readme-stats.shion.dev/api/?username=saimdinky&show_icons=true&count_private=true&theme=react&bg_color=1F222E&title_color=7cebf5&icon_color=2d7de4&border_color=7cebf5&border_radius=10" height="192px"/></a>
-  <a href="https://github.com/anuraghazra/github-readme-stats"><img alt="saimdinky's Top Languages" src="https://github-readme-stats.shion.dev/api/top-langs/?username=saimdinky&langs_count=8&layout=compact&theme=react&bg_color=1F222E&title_color=7cebf5&icon_color=2d7de4&border_color=7cebf5&border_radius=10" height="192px"/></a>
-  <br/>
-  <b>Note:</b> Top languages is only a metric of the languages my public code consists of and doesn't reflect experience or skill level.
+  <img src="./dist/live-stats.svg" alt="GitHub Stats" />
 </p>
 
 ## 📘 My top open source projects
