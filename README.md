@@ -119,10 +119,14 @@
   <a href="https://github.com/saimdinky?tab=repositories"><img alt="All Repositories" title="All Repositories" src="https://img.shields.io/badge/-All%20Repos-00ff41?style=for-the-badge&logo=github&logoColor=02120a"/></a>
 </p>
 
-## Activity Graph
-<p align="center">
-  <img src="https://ghchart.rshah.org/7cebf5/saimdinky" width="100%" alt="Activity Graph"/>
-</p>
+## 🐍 CONTRIBUTION SNAKE - WATCH IT DEVOUR MY COMMITS!
+<div align="center">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/saimdinky/saimdinky/output/github-contribution-grid-snake-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/saimdinky/saimdinky/output/github-contribution-grid-snake.svg">
+  <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/saimdinky/saimdinky/output/github-contribution-grid-snake.svg">
+</picture>
+</div>
 
 <br>
 
