@@ -103,20 +103,20 @@
 ## 📘 My top open source projects
 
 <p align="center">
-  <a href="https://github.com/saimdinky/fastapi-rag"><img align="left" width="45%" src="https://github-readme-stats.shion.dev/api/pin/?username=saimdinky&repo=fastapi-rag&bg_color=1F222E&title_color=7cebf5&icon_color=2d7de4&theme=react&border_color=7cebf5&border_radius=10&show_icons=true" alt="fastapi-rag"></a>
-  <a href="https://github.com/saimdinky/nestJs-with-typrORM"><img align="right" width="45%" src="https://github-readme-stats.shion.dev/api/pin/?username=saimdinky&repo=nestJs-with-typrORM&bg_color=1F222E&title_color=7cebf5&icon_color=2d7de4&theme=react&border_color=7cebf5&border_radius=10&show_icons=true" alt="nestJs-with-typrORM"></a>
+  <a href="https://github.com/saimdinky/fastapi-rag"><img align="left" width="45%" src="https://github-readme-stats.shion.dev/api/pin/?username=saimdinky&repo=fastapi-rag&bg_color=02120a&title_color=00ff41&icon_color=00ff41&text_color=00cc66&border_color=00ff41&border_radius=6&show_icons=true" alt="fastapi-rag"></a>
+  <a href="https://github.com/saimdinky/nestJs-with-typrORM"><img align="right" width="45%" src="https://github-readme-stats.shion.dev/api/pin/?username=saimdinky&repo=nestJs-with-typrORM&bg_color=02120a&title_color=00ff41&icon_color=00ff41&text_color=00cc66&border_color=00ff41&border_radius=6&show_icons=true" alt="nestJs-with-typrORM"></a>
 </p>
 <p align="center">&#8192;</p>
 <p align="center">
-  <a href="https://github.com/saimdinky/nodeJs-with-typeORM"><img align="left" width="45%" src="https://github-readme-stats.shion.dev/api/pin/?username=saimdinky&repo=nodeJs-with-typeORM&bg_color=1F222E&title_color=7cebf5&icon_color=2d7de4&theme=react&border_color=7cebf5&border_radius=10&show_icons=true" alt="nodeJs-with-typeORM"></a>
-  <a href="https://github.com/saimdinky/django-class-based"><img align="right" width="45%" src="https://github-readme-stats.shion.dev/api/pin/?username=saimdinky&repo=django-class-based&theme=react&border_color=7cebf5&border_radius=10&bg_color=1F222E&title_color=7cebf5&icon_color=2d7de4&show_icons=true" alt="django-class-based"></a>
+  <a href="https://github.com/saimdinky/nodeJs-with-typeORM"><img align="left" width="45%" src="https://github-readme-stats.shion.dev/api/pin/?username=saimdinky&repo=nodeJs-with-typeORM&bg_color=02120a&title_color=00ff41&icon_color=00ff41&text_color=00cc66&border_color=00ff41&border_radius=6&show_icons=true" alt="nodeJs-with-typeORM"></a>
+  <a href="https://github.com/saimdinky/django-class-based"><img align="right" width="45%" src="https://github-readme-stats.shion.dev/api/pin/?username=saimdinky&repo=django-class-based&bg_color=02120a&title_color=00ff41&icon_color=00ff41&text_color=00cc66&border_color=00ff41&border_radius=6&show_icons=true" alt="django-class-based"></a>
 </p>
 
 <p align="center">&#8192;</p>
 <p align="center">&#8192;</p>
 
 <p align="left">
-  <a href="https://github.com/saimdinky?tab=repositories"><img alt="All Repositories" title="All Repositories" src="https://img.shields.io/badge/-All%20Repos-2962FF?style=for-the-badge&logo=github&logoColor=white"/></a>
+  <a href="https://github.com/saimdinky?tab=repositories"><img alt="All Repositories" title="All Repositories" src="https://img.shields.io/badge/-All%20Repos-00ff41?style=for-the-badge&logo=github&logoColor=02120a"/></a>
 </p>
 
 ## Activity Graph
