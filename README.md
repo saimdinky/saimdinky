@@ -3,6 +3,11 @@
   Layout inspired by: https://github.com/DavidsDvm/DavidsDvm
 -->
 
+<!-- RAINBOW LINE TOP -->
+<img src="https://github.com/AnderMendoza/AnderMendoza/raw/main/assets/line-neon.gif" width="100%">
+<!-- GIF HEADER -->
+<img src="https://github.com/AnderMendoza/AnderMendoza/raw/main/assets/banner-header.gif" width="100%">
+
 <p align="center">
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=28&duration=3000&pause=1000&color=7CEBF5&center=true&vCenter=true&width=800&lines=Hey!+I'm+Rana+Saim;Senior+Software+Engineer;Backend+%7C+AI+%7C+SaaS;saimdinky+on+GitHub" alt="Typing SVG" />
 </p>
@@ -133,3 +138,8 @@
 <br>
 
 Last refresh: <b>Tuesday, September 1 at 2:18 PM GMT+5</b>
+
+<!-- GIF FOOTER -->
+<img src="https://github.com/AnderMendoza/AnderMendoza/raw/main/assets/banner-footer.gif" width="100%">
+<!-- RAINBOW LINE BOT -->
+<img src="https://github.com/AnderMendoza/AnderMendoza/raw/main/assets/line-neon.gif" width="100%">
