@@ -43,7 +43,7 @@
 - 💬 Ask me about Java Spring Boot, NestJS, FastAPI, multi-tenant architecture, AWS serverless, and shipping GenAI
 - 📫 Feel free to contact me on <a href="https://www.linkedin.com/in/saimdinky/">LinkedIn</a>
 - ⚡ Fun fact: I’ve gone from large-scale Spring Boot ERPs to serverless finance platforms and LangGraph agents
-- 📝 Checkout my <a href="https://medium.com/@saimdinky">Medium</a>
+- 📝 Checkout my <a href="https://saimdinky.netlify.app/">portfolio</a>
 
 <br><br>
 
