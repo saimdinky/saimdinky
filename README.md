@@ -30,25 +30,15 @@
 
 
 ### 🧐 More About Me:
-<table>
-  <tr>
-    <td valign="top">
-      <ul>
-        <li>🔭 I’m currently working on production SaaS backends and AI systems — RAG, MCP (FastMCP), and LangGraph agents</li>
-        <li>🤝 I’m looking to collaborate on RAG pipelines, LLM agent workflows, and multi-tenant cloud-native APIs</li>
-        <li>🌱 I’m currently learning deeper agent orchestration, hybrid retrieval, and MCP tool design</li>
-        <li>👨🏻‍💻 Most of my projects are available on <a href="https://github.com/saimdinky?tab=repositories">Github</a></li>
-        <li>💬 Ask me about Java Spring Boot, NestJS, FastAPI, multi-tenant architecture, AWS serverless, and shipping GenAI</li>
-        <li>📫 Feel free to contact me on <a href="https://www.linkedin.com/in/saimdinky/">LinkedIn</a></li>
-        <li>⚡ Fun fact: I’ve gone from large-scale Spring Boot ERPs to serverless finance platforms and LangGraph agents</li>
-        <li>📝 Checkout my <a href="https://medium.com/@saimdinky">Medium</a></li>
-      </ul>
-    </td>
-    <td valign="top" align="right">
-      <img alt="coding" src="https://user-images.githubusercontent.com/74038190/212750687-0d2cd5ec-e5de-4955-ae1c-4a4e57622db4.gif" width="350" />
-    </td>
-  </tr>
-</table>
+
+- 🔭 I’m currently working on production SaaS backends and AI systems — RAG, MCP (FastMCP), and LangGraph agents
+- 🤝 I’m looking to collaborate on RAG pipelines, LLM agent workflows, and multi-tenant cloud-native APIs
+- 🌱 I’m currently learning deeper agent orchestration, hybrid retrieval, and MCP tool design
+- 👨🏻‍💻 Most of my projects are available on <a href="https://github.com/saimdinky?tab=repositories">Github</a>
+- 💬 Ask me about Java Spring Boot, NestJS, FastAPI, multi-tenant architecture, AWS serverless, and shipping GenAI
+- 📫 Feel free to contact me on <a href="https://www.linkedin.com/in/saimdinky/">LinkedIn</a>
+- ⚡ Fun fact: I’ve gone from large-scale Spring Boot ERPs to serverless finance platforms and LangGraph agents
+- 📝 Checkout my <a href="https://medium.com/@saimdinky">Medium</a>
 
 <br><br>
 
