@@ -123,7 +123,7 @@
 <p align="center">&#8192;</p>
 
 <p align="left">
-  <a href="https://github.com/saimdinky?tab=repositories"><img alt="All Repositories" title="All Repositories" src="https://img.shields.io/badge/-All%20Repos-00ff41?style=for-the-badge&logo=github&logoColor=02120a"/></a>
+  <a href="https://github.com/saimdinky?tab=repositories"><img alt="All Repositories" title="All Repositories" src="https://img.shields.io/badge/-All%20Repos-00cc66?style=for-the-badge&logo=github&logoColor=000000"/></a>
 </p>
 
 ## 🐍 CONTRIBUTION SNAKE - WATCH IT DEVOUR MY COMMITS!
