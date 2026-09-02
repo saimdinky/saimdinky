@@ -31,8 +31,9 @@ jobs:
       - name: Convert SVG to PNG for GitHub README
         run: |
           sudo apt-get update
-          sudo apt-get install -y librsvg2-bin
+          sudo apt-get install -y librsvg2-bin python3-pil
           rsvg-convert -w 1400 dist/live-stats.svg -o dist/live-stats.png
+          python3 scripts/crop-stats-png.py
 
       - name: Commit and push if the stats changed
         run: |
