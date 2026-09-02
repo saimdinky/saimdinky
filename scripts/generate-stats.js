@@ -1,5 +1,5 @@
-// Fetches real, live contribution data straight from GitHub's GraphQL API
-// (no third-party caching layer) and renders a stats SVG.
+// Fetches the same public contribution calendar GitHub shows on the profile
+// (so totals match "contributions in the last year") and renders a stats SVG.
 
 const fs = require("fs");
 const path = require("path");
@@ -7,30 +7,62 @@ const path = require("path");
 const GH_TOKEN = process.env.GH_TOKEN;
 const GH_USERNAME = process.env.GH_USERNAME || "saimdinky";
 
-if (!GH_TOKEN) {
-  console.error("Missing GH_TOKEN (add a PROFILE_TOKEN secret in repo settings).");
-  process.exit(1);
+function todayInKarachi() {
+  return new Date().toLocaleDateString("en-CA", { timeZone: "Asia/Karachi" });
 }
 
-const query = `
-  query($login: String!) {
-    user(login: $login) {
-      contributionsCollection {
-        contributionCalendar {
-          totalContributions
-          weeks {
-            contributionDays {
-              date
-              contributionCount
+function parseCount(tip) {
+  if (!tip || tip.startsWith("No ")) return 0;
+  return parseInt(tip.replace(/,/g, ""), 10) || 0;
+}
+
+async function daysFromContributionsPage() {
+  const url = `https://github.com/users/${GH_USERNAME}/contributions`;
+  const res = await fetch(url, {
+    headers: {
+      "User-Agent":
+        "Mozilla/5.0 (compatible; saimdinky-live-stats/1.0; +https://github.com/saimdinky)",
+      Accept: "text/html",
+    },
+  });
+  if (!res.ok) {
+    throw new Error(`contributions page HTTP ${res.status}`);
+  }
+  const html = await res.text();
+  const dates = [...html.matchAll(/data-date="(\d{4}-\d{2}-\d{2})"/g)].map((m) => m[1]);
+  const tips = [...html.matchAll(/>(No contributions on [^<]+|\d[\d,]* contributions? on [^<]+)</g)].map(
+    (m) => m[1]
+  );
+  if (dates.length < 300 || dates.length !== tips.length) {
+    throw new Error(`could not parse contribution calendar (${dates.length} dates, ${tips.length} tips)`);
+  }
+  return dates
+    .map((date, i) => ({ date, contributionCount: parseCount(tips[i]) }))
+    .sort((a, b) => a.date.localeCompare(b.date));
+}
+
+async function daysFromGraphQL() {
+  if (!GH_TOKEN) {
+    throw new Error("Missing GH_TOKEN for GraphQL fallback.");
+  }
+  const query = `
+    query($login: String!) {
+      user(login: $login) {
+        contributionsCollection {
+          restrictedContributionsCount
+          contributionCalendar {
+            totalContributions
+            weeks {
+              contributionDays {
+                date
+                contributionCount
+              }
             }
           }
         }
       }
     }
-  }
-`;
-
-async function main() {
+  `;
   const res = await fetch("https://api.github.com/graphql", {
     method: "POST",
     headers: {
@@ -39,39 +71,50 @@ async function main() {
     },
     body: JSON.stringify({ query, variables: { login: GH_USERNAME } }),
   });
-
   const json = await res.json();
-
   if (json.errors) {
-    console.error(JSON.stringify(json.errors, null, 2));
-    process.exit(1);
+    throw new Error(JSON.stringify(json.errors));
   }
+  const collection = json.data.user.contributionsCollection;
+  const days = collection.contributionCalendar.weeks.flatMap((w) => w.contributionDays);
+  return { days, restricted: collection.restrictedContributionsCount || 0 };
+}
 
-  const calendar = json.data.user.contributionsCollection.contributionCalendar;
-  const totalContributions = calendar.totalContributions;
+async function loadDays() {
+  try {
+    const days = await daysFromContributionsPage();
+    console.log(`Loaded ${days.length} days from GitHub contributions page.`);
+    return days;
+  } catch (err) {
+    console.warn(`Contributions page failed (${err.message}); falling back to GraphQL.`);
+    const { days, restricted } = await daysFromGraphQL();
+    if (restricted && days.length) {
+      days[days.length - 1].contributionCount += restricted;
+    }
+    return days;
+  }
+}
 
-  // Flatten all days into a single chronological array
-  const days = calendar.weeks.flatMap((w) => w.contributionDays);
+async function main() {
+  const days = await loadDays();
+  const totalContributions = days.reduce((sum, d) => sum + d.contributionCount, 0);
 
-  // --- Current streak: walk backward from the most recent day ---
   let currentStreak = 0;
   let currentStreakStart = null;
-  const todayStr = new Date().toISOString().split("T")[0];
+  const todayStr = todayInKarachi();
 
   for (let i = days.length - 1; i >= 0; i--) {
     const day = days[i];
-    if (day.date > todayStr) continue; // skip any future placeholder days
+    if (day.date > todayStr) continue;
     if (day.contributionCount > 0) {
       currentStreak++;
       currentStreakStart = day.date;
     } else {
-      // allow today to be zero (streak not broken until the day ends)
       if (day.date === todayStr) continue;
       break;
     }
   }
 
-  // --- Longest streak: scan the whole year for the longest run ---
   let longestStreak = 0;
   let longestStreakRange = ["", ""];
   let run = 0;
@@ -92,7 +135,11 @@ async function main() {
 
   const fmt = (d) =>
     d
-      ? new Date(d).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })
+      ? new Date(`${d}T12:00:00`).toLocaleDateString("en-US", {
+          month: "short",
+          day: "numeric",
+          year: "numeric",
+        })
       : "";
 
   const firstDay = days.find((d) => d.contributionCount > 0)?.date || days[0]?.date;
@@ -162,7 +209,12 @@ async function main() {
 
   fs.mkdirSync(path.join(__dirname, "..", "dist"), { recursive: true });
   fs.writeFileSync(path.join(__dirname, "..", "dist", "live-stats.svg"), svg);
-  console.log("live-stats.svg generated.");
+  console.log(
+    `live-stats.svg generated. total=${totalContributions} streak=${currentStreak} longest=${longestStreak}`
+  );
 }
 
-main();
+main().catch((err) => {
+  console.error(err);
+  process.exit(1);
+});
