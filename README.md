@@ -104,7 +104,7 @@
 ## 🔥 GitHub Stats 🔥
 
 <p align="center">
-  <img src="./dist/live-stats.png" alt="GitHub Stats" width="700" />
+  <img src="./dist/live-stats.png" alt="GitHub Stats" width="100%" />
 </p>
 
 ## 📘 My top open source projects
